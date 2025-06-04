@@ -7,7 +7,7 @@
 
   // ベース設定を継承
   extends: [
-    "config:base"
+    "config:recommended"
   ],
   
   // automergeを無効化
