@@ -1,0 +1,47 @@
+{
+  // Renovateの基本設定
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  
+  // ベース設定を継承
+  extends: [
+    "config:base"
+  ],
+  
+  // automergeを無効化
+  automerge: false,
+  
+  // パッケージルール
+  packageRules: [
+    {
+      // すべてのパッケージに対して
+      matchPackagePatterns: ["*"],
+      
+      // メジャーアップデートを無効化
+      matchUpdateTypes: ["major"],
+      enabled: false
+    },
+    {
+      // すべてのパッケージに対して
+      matchPackagePatterns: ["*"],
+      
+      // マイナーアップデートを無効化
+      matchUpdateTypes: ["minor"],
+      enabled: false
+    },
+    {
+      // すべてのパッケージに対して
+      matchPackagePatterns: ["*"],
+      
+      // パッチアップデートのみ有効
+      matchUpdateTypes: ["patch"],
+      enabled: true
+    }
+  ],
+  
+  // プルリクエストの設定
+  prConcurrentLimit: 4,
+  prHourlyLimit: 2,
+  
+  // タイムゾーン設定（日本時間）
+  timezone: "Asia/Tokyo",
+}
