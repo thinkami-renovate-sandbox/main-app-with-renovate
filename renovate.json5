@@ -16,16 +16,16 @@
       // すべてのパッケージに対して
       matchPackageNames: ["*"],
       
-      // メジャー・マイナーアップデートを無効化
-      matchUpdateTypes: ["major", "minor"],
+      // メジャーアップデートを無効化
+      matchUpdateTypes: ["major"],
       enabled: false
     },
     {
       // すべてのパッケージに対して
       matchPackageNames: ["*"],
       
-      // パッチアップデートのみ有効
-      matchUpdateTypes: ["patch"],
+      // マイナー・パッチアップデートのみ有効
+      matchUpdateTypes: ["minor", "patch"],
       enabled: true
     }
   ],
