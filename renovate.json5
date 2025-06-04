@@ -2,6 +2,9 @@
   // Renovateの基本設定
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
   
+  // すべて実行する
+  mode: "full",
+
   // ベース設定を継承
   extends: [
     "config:base"
