@@ -9,6 +9,13 @@
   extends: [
     "config:recommended"
   ],
+
+  "hostRules": [
+    {
+      "matchHost": "github.com",
+      "token": "{{ secrets.GITHUB_TOKEN }}"
+    }
+  ],
   
   // automergeを無効化
   automerge: false,
